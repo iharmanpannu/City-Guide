@@ -1,0 +1,198 @@
+/* =================================
+  Base Element Styles
+==================================== */
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  line-height: 1.6;
+  color: #3a3a3a;
+}
+
+p {
+  font-size: .95em;
+  margin-bottom: 1.8em;
+}
+
+h2, h3, a {
+  color: #093a58;
+}
+
+h2, h3 {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name, .main-nav {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.name {
+  font-size: 1.25em;
+  margin-top: 1em;
+  text-shadow: 1px 1px 10px #85a7bb;
+}
+
+.name a, .main-nav a {
+  text-align: center;
+  display: block;
+  padding: .6em 1em;
+}
+
+.main-nav a {
+  font-size: .95em;
+  color: #3acec2;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover {
+  color: #093a58;
+}
+
+.headline {
+  margin-bottom: 0;
+}
+
+/* ---- Layout Containers ---- */
+
+.banner, .main-footer {
+  text-align: center;
+}
+
+.banner {
+  color: #fff;
+  background: #3acec2;
+  padding: 3em 0;
+  margin: auto;
+}
+
+.main-footer {
+  background: #d9e4ea;
+  padding: 2em 0;
+  margin-top: 30px;
+}
+
+.columns {
+  max-width: 80%;
+  margin: auto;
+  padding: 3em 0;
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+  width: 190px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 20px #0f5953;
+}
+
+.feat-img {
+  box-shadow: 1px 1px 20px #797979;
+}
+
+figure {
+  position: relative;
+  margin: 0;
+  line-height: 0;
+}
+
+figcaption {
+  font-size: .9em;
+  line-height: 1.5;
+  padding: 1em;
+  color: #fff;
+  background-color: rgba(19, 43, 102, .80);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.icon-location {
+  width: 35px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  .main-header {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgb(52, 52, 52);
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  .name, .main-nav {
+    padding: 0;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .name {
+    float: left;
+  }
+
+  .main-nav li {
+    display: inline-block;
+    float: right;
+    margin-top: 1.5em;
+  }
+  body {
+    padding-top: 68px;
+  }
+
+  .banner {
+    padding: 6em 0;
+  }
+  /* Column Styles */
+  .col {
+    float: left;
+    padding: 0 1em;
+  }
+  .primary, .secondary {
+    width: 50%;
+  }
+}
+
+@media (min-width:1025px) {
+  .columns {
+    max-width: 1125px;
+  }
+  .primary {
+    width: 40%;
+  }
+  .secondary, .tertiary {
+    width: 30%;
+  }
+}
